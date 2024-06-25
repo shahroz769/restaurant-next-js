@@ -14,7 +14,7 @@ export default function Home() {
                     }}
                 >
                     <h1>Work In Progress</h1>
-                    <h1>BAIT AL AYAWED</h1>
+                    <h1>BAIT ALAYAWED</h1>
                 </div>
             </div>
             <div className={styles.center}>
