@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Logo from '@/assets/images/logo1.png';
+import Logo from '@/assets/images/Logo1.png';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
