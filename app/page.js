@@ -1,32 +1,31 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Marquee from '@/components/Marquee';
+// import DishContainer from '@/components/DishContainer';
+import ContactSection from '@/components/ContactSection.jsx';
+import CateringMenu from '@/components/CateringMenu';
+import PopularDishes from '@/components/PopularDishes';
+import Footer from '@/components/Footer';
+import RecentArticles from '@/components/RecentArticles';
+import Testimonials from '@/components/Testimonials';
+import ImprovedDishCarousel from '@/components/ImprovedDishCarousel';
+import PopularFoodContainer from '@/components/PopularFoodContainer';
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <div className={styles.center}>
-                <div
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: "24px"
-                    }}
-                >
-                    <h1>Work In Progress</h1>
-                    <h1>BAIT ALAYAWED</h1>
-                </div>
-            </div>
-            <div className={styles.center}>
-                <Image
-                    className={styles.logo}
-                    src="/next.svg"
-                    alt="Next.js Logo"
-                    width={180}
-                    height={37}
-                    priority
-                />
-            </div>
+        <main>
+            <Navbar />
+            <Hero />
+            <Marquee />
+            <ImprovedDishCarousel />
+            {/* <DishContainer /> */}
+            <PopularDishes />
+            <PopularFoodContainer />
+            <CateringMenu />
+            <RecentArticles />
+            <Testimonials />
+            <ContactSection />
+            <Footer />
         </main>
     );
 }
