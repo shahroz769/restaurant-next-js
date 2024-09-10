@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import pangaiaBold from '@/app/fonts/pangaiaBold';
 import pangaiaMedium from '@/app/fonts/pangaiaMedium';
-import menuDish from '@/assets/images/menu-dish.jpg';
+import menuDish from '@/assets/images/dishburger.png';
 
 const menuDishes = {
     menu1: {
