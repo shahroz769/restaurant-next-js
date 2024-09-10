@@ -26,6 +26,13 @@ export default function Navbar() {
         };
     }, []);
 
+    const navItems = [
+        { name: 'Home', href: '/' },
+        { name: 'Dine-in', href: '/dine-in' },
+        { name: 'Catering', href: '/catering' },
+        { name: 'Blog', href: '/blog' },
+    ];
+
     return (
         <nav
             className={`fixed w-full z-10 transition-all duration-300 ${
@@ -48,22 +55,20 @@ export default function Navbar() {
                     </div>
                     <div className='hidden md:block flex-grow'>
                         <div className='flex justify-center space-x-4'>
-                            {['Home', 'Dine-in', 'Catering', 'Blog'].map(
-                                (item) => (
-                                    <Link
-                                        key={item}
-                                        href={`/${item.toLowerCase()}`}
-                                        className='text-white hover:bg-white hover:text-black px-3 py-2 rounded-full font-medium transition-colors duration-300'
-                                    >
-                                        {item}
-                                    </Link>
-                                )
-                            )}
+                            {navItems.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className='text-white hover:bg-white hover:text-black px-3 py-2 rounded-full font-medium transition-colors duration-300'
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                     <div className='hidden md:block'>
                         <Link
-                            href='/contact'
+                            href='/'
                             className='bg-white text-black px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors duration-300'
                         >
                             Contact
@@ -122,13 +127,13 @@ export default function Navbar() {
                     transition={{ duration: 0.3 }}
                 >
                     <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black bg-opacity-75 backdrop-blur-md'>
-                        {['Home', 'Dine-in', 'Catering', 'Blog'].map((item) => (
+                        {navItems.map((item) => (
                             <Link
-                                key={item}
-                                href={`/${item.toLowerCase()}`}
+                                key={item.name}
+                                href={item.href}
                                 className='text-white hover:bg-white hover:text-black block px-3 py-2 rounded-md text-base font-medium'
                             >
-                                {item}
+                                {item.name}
                             </Link>
                         ))}
                         <Link

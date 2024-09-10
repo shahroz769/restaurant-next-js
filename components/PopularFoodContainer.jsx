@@ -7,7 +7,7 @@ function SectionHeader({ sub, main }) {
         <div className='flex flex-col items-center text-center'>
             <span className='text-red-600 font-semibold mb-2'>- {sub} -</span>
             <h1
-                className={`text-2xl md:text-3xl lg:text-4xl font-normal ${pangaiaBold}`}
+                className={`text-4xl md:text-5xl font-bold text-gray-900  ${pangaiaBold.className}`}
             >
                 {main}
             </h1>
@@ -17,27 +17,35 @@ function SectionHeader({ sub, main }) {
 
 function PopularFoodCard() {
     return (
-        <div className='bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 ease-in-out hover:scale-105'>
-            <div className='w-full h-48 sm:h-56 md:h-64 overflow-hidden'>
+        <div className='bg-white rounded-lg overflow-hidden shadow-sm transition-transform duration-300 ease-in-out group cursor-pointer'>
+            <div className='relative overflow-hidden'>
                 <Image
-                    className='w-full h-full object-cover filter brightness-90 transition-transform duration-300 ease-in-out cursor-pointer 
-                     hover:scale-110 hover:rotate-3'
+                    className='w-full h-full object-cover filter brightness-90 ease-in-out 
+                       group-hover:scale-110 group-hover:opacity-90 group-hover:rotate-3 transition-all duration-500'
                     src={Burger}
                     alt='burger'
                     width={400}
                     height={300}
+                    placeholder='blur'
                 />
+                <span className='absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full'>
+                    -10%
+                </span>
             </div>
-            <div className='p-4 flex flex-col gap-1.5'>
-                <h2 className='text-xl sm:text-2xl text-yellow-600 mb-1'>
+            <div className='px-4 py-3'>
+                <span className='inline-block bg-red-100 text-red-500 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1'>
+                    Burgers
+                </span>
+                <h2 className='text-xl font-bold text-gray-900 mb-2'>
                     Burger Thief
                 </h2>
-                <p className='font-medium text-sm sm:text-base'>
+                <p className='text-gray-600 text-sm mb-4 h-10 overflow-hidden'>
                     Spicy Beef Burger with American cheese...
                 </p>
-                <div className='mt-3 flex items-center justify-between'>
-                    <p className='font-medium text-red-600'>PKR 800</p>
-                    <p className='font-medium text-red-600'>-10%</p>
+                <div className='flex justify-between items-center'>
+                    <span className='text-gray-900 font-semibold rounded-full'>
+                        PKR 800
+                    </span>
                 </div>
             </div>
         </div>

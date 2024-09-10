@@ -94,12 +94,15 @@ export default function PopularDishes() {
                     - SPECIALS CHOICE -
                 </p>
                 <h2
-                    className={`text-4xl font-bold text-gray-900 ${pangaiaBold.className}`}
+                    className={`text-4xl md:text-5xl font-bold text-gray-900 ${pangaiaBold.className}`}
                 >
                     Popular Dishes
                 </h2>
             </div>
-            <div className='overflow-hidden feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg' ref={emblaRef}>
+            <div
+                className='overflow-hidden feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg'
+                ref={emblaRef}
+            >
                 <div className='flex'>
                     {dishes.map((dish, index) => (
                         <div
@@ -113,6 +116,7 @@ export default function PopularDishes() {
                                         alt={dish.name}
                                         fill
                                         className='object-cover rounded-md transition-all duration-300 group-hover:scale-110 group-hover:brightness-50'
+                                        placeholder='blur'
                                     />
                                     <div className='absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
                                         <div className='w-24 h-24 flex flex-col items-center justify-center bg-white rounded-full shadow-lg transform scale-0 transition-transform duration-300 group-hover:scale-100'>

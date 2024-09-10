@@ -755,7 +755,7 @@ export default function CateringMenu({ location }) {
                     className='text-center mb-8'
                 >
                     <p className='text-red-600 font-semibold mb-2'>
-                        - Choose delicious -
+                        - CHOOSE DELICIOUS -
                     </p>
                     <h1
                         className={`text-4xl md:text-5xl font-bold text-gray-900 ${pangaiaBold.className}`}
@@ -795,7 +795,7 @@ export default function CateringMenu({ location }) {
                             ([category, dishes]) => (
                                 <div key={category} className='mb-8'>
                                     <h2
-                                        className={`text-2xl font-bold text-gray-900 mb-8 capitalize text-center ${pangaiaMedium.className}`}
+                                        className={`text-3xl font-bold text-gray-900 mb-8 capitalize text-center ${pangaiaMedium.className}`}
                                     >
                                         {category}
                                     </h2>
@@ -809,15 +809,16 @@ export default function CateringMenu({ location }) {
                                                     duration: 0.3,
                                                     delay: index * 0.1,
                                                 }}
-                                                className='flex gap-6 bg-slate-50 p-4 rounded-lg shadow-sm'
+                                                className='flex gap-6 bg-slate-50 p-4 rounded-lg shadow-sm transition-shadow duration-300 group cursor-pointer'
                                             >
-                                                <div className='flex-shrink-0'>
+                                                <div className='flex-shrink-0 w-20 h-20 rounded-full overflow-hidden'>
                                                     <Image
                                                         src={menuDish}
                                                         alt={dish.alt}
-                                                        width={80}
-                                                        height={80}
-                                                        className='rounded-full object-cover'
+                                                        width={100}
+                                                        height={100}
+                                                        className='w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                                                        placeholder='blur'
                                                     />
                                                 </div>
                                                 <div className='flex flex-col justify-center w-full'>

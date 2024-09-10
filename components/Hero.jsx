@@ -55,8 +55,8 @@ export default function Hero() {
                         alt='Hero background'
                         fill
                         style={{ objectFit: 'cover' }}
-                        quality={100}
                         priority
+                        placeholder='blur'
                     />
                 </motion.div>
             </AnimatePresence>
@@ -81,8 +81,8 @@ export default function Hero() {
                         {texts[currentIndex].subtitle}
                     </motion.p>
                     <Link
-                        href='/contact'
-                        className='bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300'
+                        href='/'
+                        className='bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300'
                     >
                         Contact us
                     </Link>

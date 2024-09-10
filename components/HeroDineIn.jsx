@@ -10,8 +10,8 @@ export default function HeroDineIn() {
                 alt="Hero background"
                 fill
                 style={{ objectFit: "cover" }}
-                quality={100}
                 priority
+                placeholder='blur'
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                 <div className="text-center text-white px-4">

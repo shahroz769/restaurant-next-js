@@ -21,6 +21,8 @@ import {
 import { CalendarIcon } from 'lucide-react';
 import { format } from 'date-fns';
 import ContactBg from '@/assets/images/bg.avif';
+import pangaiaBold from '@/app/fonts/pangaiaBold';
+import pangaiaMedium from '@/app/fonts/pangaiaMedium';
 
 export default function ContactSection() {
     const [date, setDate] = React.useState();
@@ -45,7 +47,7 @@ export default function ContactSection() {
                     alt='Restaurant background'
                     fill
                     style={{ objectFit: 'cover' }}
-                    quality={100}
+                    placeholder='blur'
                 />
                 <div className='absolute inset-0 bg-black bg-opacity-50'></div>
             </div>
@@ -54,19 +56,20 @@ export default function ContactSection() {
                 <div className='bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden'>
                     <div className='flex flex-col md:flex-row'>
                         <div className='md:w-1/2 p-8 text-white'>
-                            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-                                CRISPY, EVERY BITE TASTE
+                            <h2
+                                className={`text-4xl md:text-5xl font-bold text-white mb-4 ${pangaiaBold.className}`}
+                            >
+                                Crispy Every Bite
                             </h2>
-                            <h3 className='text-2xl md:text-3xl font-semibold mb-6'>
-                                NEED BOOKING?
+                            <h3 className='text-2xl md:text-3xl font-normal mb-6'>
+                                Need Booking?
                                 <br />
-                                RESERVE YOUR TABLE
+                                Reserve your table
                             </h3>
                             <div className='mb-8'>
                                 <h4 className='text-xl font-semibold'>
                                     Contact
                                 </h4>
-                                <p>24/7 SUPPORT CENTER</p>
                                 <p className='text-2xl font-bold'>
                                     +1718-904-4450
                                 </p>
@@ -74,7 +77,9 @@ export default function ContactSection() {
                         </div>
 
                         <div className='md:w-1/2 p-6 bg-white rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none'>
-                            <h3 className='text-2xl font-bold mb-6 text-center text-gray-800'>
+                            <h3
+                                className={`text-2xl font-bold mb-6 text-center text-gray-800 ${pangaiaMedium.className}`}
+                            >
                                 Make a Reservation
                             </h3>
                             <form onSubmit={handleSubmit} className='space-y-2'>

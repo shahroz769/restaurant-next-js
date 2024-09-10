@@ -21,6 +21,7 @@ function DishCard({ dish, index }) {
                             width={150}
                             height={150}
                             className='w-full h-auto'
+                            placeholder='blur'
                         />
                     </div>
                     <div className='w-12 h-0.5 bg-golden my-3'></div>
