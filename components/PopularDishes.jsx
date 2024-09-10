@@ -99,7 +99,7 @@ export default function PopularDishes() {
                     Popular Dishes
                 </h2>
             </div>
-            <div className='overflow-hidden feather-shadow' ref={emblaRef}>
+            <div className='overflow-hidden feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg' ref={emblaRef}>
                 <div className='flex'>
                     {dishes.map((dish, index) => (
                         <div
