@@ -71,7 +71,7 @@ export default function ContactSection() {
                                     Contact
                                 </h4>
                                 <p className='text-2xl font-bold'>
-                                    +1718-904-4450
+                                    17533933 / 33220068
                                 </p>
                             </div>
                         </div>

@@ -1,85 +1,113 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
-import BeefRuti from "@/assets/images/dishes/beef-ruti.png";
-import Burger from "@/assets/images/dishes/big-burger.png";
-import DeliciousBurger from "@/assets/images/dishes/delicious-burger.png";
-import Chicken from "@/assets/images/dishes/chiken.png";
-import FrenchFries from "@/assets/images/dishes/french-fry.png";
-import GrilledChicken from "@/assets/images/dishes/grilled.png";
-import GrilledChicken2 from "@/assets/images/dishes/grilled-2.png";
-import Pasta from "@/assets/images/dishes/pasta.png";
-import Ruti from "@/assets/images/dishes/ruti.png";
-import pangaiaBold from "@/app/fonts/pangaiaBold";
-import zcoolBold from "@/app/fonts/zcoolBold";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
+import useEmblaCarousel from 'embla-carousel-react';
+import APPETIZERS from '@/assets/images/category/APPETIZERS.png';
+import BREAD from '@/assets/images/category/BREAD.png';
+import SHAWARMA from '@/assets/images/category/SHAWARMA.png';
+import CHINESE from '@/assets/images/category/CHINESE.png';
+import CURRY from '@/assets/images/category/CURRY.png';
+import DAY from '@/assets/images/category/DAY.png';
+import GRILL from '@/assets/images/category/GRILL.png';
+import PASTAS from '@/assets/images/category/PASTAS.png';
+import REFRESHMENTS from '@/assets/images/category/REFRESHMENTS.png';
+import RICE from '@/assets/images/category/RICE.png';
+import SALADS from '@/assets/images/category/SALADS.png';
+import SOUP from '@/assets/images/category/SOUP.png';
+import SWEETS from '@/assets/images/category/SWEETS.png';
+import pangaiaBold from '@/app/fonts/pangaiaBold';
+import zcoolBold from '@/app/fonts/zcoolBold';
 
 const dishes = [
     {
-        category: "BURGER",
-        href: "/dine-in-menu/burger",
-        image: { src: Burger, alt: "Big Burger" },
-        qty: 5,
+        category: 'APPETIZERS',
+        href: '/dine-in#appetizers',
+        image: { src: APPETIZERS, alt: 'APPETIZERS' },
+        qty: 9,
     },
     {
-        category: "BURGER",
-        href: "/dine-in-menu/burger",
-        image: { src: DeliciousBurger, alt: "Delicious Burger" },
+        category: 'BREAD',
+        href: '/dine-in#bread',
+        image: { src: BREAD, alt: 'BREAD' },
         qty: 3,
     },
     {
-        category: "CHICKEN",
-        href: "/dine-in-menu/chicken",
-        image: { src: Chicken, alt: "Chicken" },
-        qty: 7,
-    },
-    {
-        category: "CHICKEN",
-        href: "/dine-in-menu/chicken",
-        image: { src: GrilledChicken, alt: "Grilled Chicken" },
-        qty: 4,
-    },
-    {
-        category: "CHICKEN",
-        href: "/dine-in-menu/chicken",
-        image: { src: GrilledChicken2, alt: "Grilled Chicken 2" },
-        qty: 2,
-    },
-    {
-        category: "SIDE",
-        href: "/dine-in-menu/side",
-        image: { src: FrenchFries, alt: "French Fries" },
+        category: 'SHAWARMA',
+        href: '/dine-in#burger-&-shawarma',
+        image: { src: SHAWARMA, alt: 'SHAWARMA' },
         qty: 10,
     },
     {
-        category: "PASTA",
-        href: "/dine-in-menu/pasta",
-        image: { src: Pasta, alt: "Pasta" },
+        category: 'CHINESE',
+        href: '/dine-in#chinese',
+        image: { src: CHINESE, alt: 'CHINESE' },
+        qty: 13,
+    },
+    {
+        category: 'CURRY',
+        href: '/dine-in#curry-items',
+        image: { src: CURRY, alt: 'CURRY' },
+        qty: 22,
+    },
+    {
+        category: 'DAILY',
+        href: '/dine-in#dish-of-the-day',
+        image: { src: DAY, alt: 'DAY' },
+        qty: 3,
+    },
+    {
+        category: 'GRILL',
+        href: '/dine-in#grill',
+        image: { src: GRILL, alt: 'GRILL' },
+        qty: 22,
+    },
+    {
+        category: 'PASTAS',
+        href: '/dine-in#pastas',
+        image: { src: PASTAS, alt: 'PASTAS' },
+        qty: 6,
+    },
+    // {
+    //     category: 'REFRESHING',
+    //     href: '/dine-in#refreshments',
+    //     image: { src: REFRESHMENTS, alt: 'REFRESHMENTS' },
+    //     qty: 8,
+    // },
+    {
+        category: 'RICE',
+        href: '/dine-in#rice',
+        image: { src: RICE, alt: 'RICE' },
+        qty: 18,
+    },
+    {
+        category: 'SALADS',
+        href: '/dine-in#salads',
+        image: { src: SALADS, alt: 'SALADS' },
+        qty: 12,
+    },
+    {
+        category: 'SOUP',
+        href: '/dine-in#soup',
+        image: { src: SOUP, alt: 'SOUP' },
         qty: 6,
     },
     {
-        category: "RUTI",
-        href: "/dine-in-menu/ruti",
-        image: { src: Ruti, alt: "Ruti" },
-        qty: 8,
-    },
-    {
-        category: "RUTI",
-        href: "/dine-in-menu/ruti",
-        image: { src: BeefRuti, alt: "Beef Ruti" },
-        qty: 5,
+        category: 'SWEETS',
+        href: '/dine-in#sweets',
+        image: { src: SWEETS, alt: 'SWEETS' },
+        qty: 4,
     },
 ];
 
-const OPTIONS = { align: "start", loop: true };
+const OPTIONS = { align: 'start', loop: true };
 
 function SectionHeader({ sub, main }) {
     return (
-        <div className="flex flex-col items-center">
-            <span className="text-red-600 font-semibold mb-2">- {sub} -</span>
+        <div className='flex flex-col items-center'>
+            <span className='text-red-600 font-semibold mb-2'>- {sub} -</span>
             <h1
                 className={`text-4xl md:text-5xl font-bold text-gray-900  text-center ${pangaiaBold.className}`}
             >
@@ -92,25 +120,25 @@ function SectionHeader({ sub, main }) {
 function DishCard({ dish, index, hoveredDishCard, setHoveredDishCard }) {
     return (
         <div
-            className="flex-[0_0_45%] sm:flex-[0_0_33.333%] md:flex-[0_0_25%] lg:flex-[0_0_20%] min-w-0 p-2 max-w-[200px]"
+            className='flex-[0_0_45%] sm:flex-[0_0_33.333%] md:flex-[0_0_25%] lg:flex-[0_0_20%] min-w-0 p-2 max-w-[200px]'
             onMouseEnter={() => setHoveredDishCard(index)}
             onMouseLeave={() => setHoveredDishCard(false)}
         >
             <Link href={dish.href}>
-                <div className="bg-gradient-to-t from-white to-[#F4EFE3] rounded-3xl flex flex-col items-center justify-center gap-1.5 h-full py-4 px-2">
-                    <div className="w-full flex-1">
+                <div className='bg-gradient-to-t from-white to-[#F4EFE3] rounded-3xl flex flex-col items-center justify-center gap-1.5 h-full py-4 px-2'>
+                    <div className='w-full flex-1'>
                         <Image
                             src={dish.image.src}
                             alt={dish.image.alt}
                             width={80}
                             height={80}
-                            className="w-full h-auto"
+                            className='w-full h-auto'
                             unoptimized
                         />
                     </div>
                     <div
                         className={`bg-[#D12525] h-0.5 rounded-full my-2 duration-300 ${
-                            hoveredDishCard === index ? "w-[50%]" : "w-10"
+                            hoveredDishCard === index ? 'w-[50%]' : 'w-10'
                         }`}
                     ></div>
                     <h2
@@ -118,8 +146,8 @@ function DishCard({ dish, index, hoveredDishCard, setHoveredDishCard }) {
                             zcoolBold.className
                         } ${
                             hoveredDishCard === index
-                                ? "text-[#D12525]"
-                                : "text-black"
+                                ? 'text-[#D12525]'
+                                : 'text-black'
                         }`}
                     >
                         {dish.category}
@@ -127,8 +155,8 @@ function DishCard({ dish, index, hoveredDishCard, setHoveredDishCard }) {
                     <p
                         className={`font-semibold text-xs duration-300 ${
                             hoveredDishCard === index
-                                ? "text-black"
-                                : "text-[#D12525]"
+                                ? 'text-black'
+                                : 'text-[#D12525]'
                         } `}
                     >
                         {dish.qty} PRODUCTS
@@ -144,8 +172,8 @@ function EmblaCarousel({ dishes, options }) {
     const [hoveredDishCard, setHoveredDishCard] = useState(false);
 
     return (
-        <div className="overflow-hidden w-full" ref={emblaRef}>
-            <div className="flex">
+        <div className='overflow-hidden w-full' ref={emblaRef}>
+            <div className='flex'>
                 {dishes.map((dish, index) => (
                     <DishCard
                         dish={dish}
@@ -162,8 +190,8 @@ function EmblaCarousel({ dishes, options }) {
 
 export default function ImprovedDishCarousel() {
     return (
-        <div className="feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg flex flex-col items-center gap-8 px-4 sm:px-6 md:px-8 lg:px-12 w-full">
-            <SectionHeader sub="OUR MENU" main="Our Delicious Foods" />
+        <div className='feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg flex flex-col items-center gap-8 px-4 sm:px-6 md:px-8 lg:px-12 w-full'>
+            <SectionHeader sub='OUR MENU' main='Our Delicious Foods' />
             <EmblaCarousel dishes={dishes} options={OPTIONS} />
         </div>
     );

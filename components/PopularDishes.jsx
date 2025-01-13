@@ -9,76 +9,76 @@ import pangaiaBold from '@/app/fonts/pangaiaBold';
 
 const dishes = [
     {
-        name: 'Sheesh Tawouk',
-        image: dishImg,
-        ingredients: ['Chicken', 'Spices', 'Yoghurt'],
-        price: '$5.00',
+        name: 'Mixed Grill',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789034/Caltec_Customers/29.jpg',
+        ingredients: ['Malai Boti', 'Sheesh Tawouk', 'Kabab'],
+        price: '4.0 AED',
     },
     {
-        name: 'Chicken Biryani',
-        image: dishImg,
-        ingredients: ['Chicken', 'Rice', 'Biryani Masala'],
-        price: '$5.00',
+        name: 'Chicken Shashlik with Rice',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789042/Caltec_Customers/35.jpg',
+        ingredients: ['Chicken Shashlik', 'Rice'],
+        price: '2.0 AED',
     },
     {
-        name: 'Meat Kabab',
-        image: dishImg,
-        ingredients: ['Ground Meat', 'Spices', 'Onions'],
-        price: '$5.00',
+        name: 'Lamb Chops',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789055/Caltec_Customers/46.jpg',
+        ingredients: ['Lamb Meat', 'Spices', 'Sauce'],
+        price: '6.5 AED',
     },
     {
-        name: 'Prawn Tempura',
-        image: dishImg,
-        ingredients: ['Prawns', 'Tempura Batter', 'Soy Sauce'],
-        price: '$5.00',
+        name: 'Garlic Prawn with Rice',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789066/Caltec_Customers/57.jpg',
+        ingredients: ['Garlic', 'Prawn', 'Rice'],
+        price: '3.2 AED',
     },
     {
-        name: 'Chicken Manchurian',
-        image: dishImg,
-        ingredients: ['Chicken', 'Manchurian Sauce', 'Bell Peppers'],
-        price: '$5.00',
+        name: 'Mixed Chowmein',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789076/Caltec_Customers/67.jpg',
+        ingredients: ['Chicken', 'Vegetables'],
+        price: '1.8 AED',
+    },
+    {
+        name: 'Mutton Kadahi',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789083/Caltec_Customers/74.jpg',
+        ingredients: ['Mutton', 'Tomatoes', 'Spices'],
+        price: '2.5 AED',
+    },
+    {
+        name: 'Chicken Oriental Masala',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789093/Caltec_Customers/84.jpg',
+        ingredients: ['Chicken', 'Spices'],
+        price: '2.2 AED',
+    },
+    {
+        name: 'Mutton Dum Pukht Biryani',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789105/Caltec_Customers/95.jpg',
+        ingredients: ['Mutton', 'Rice'],
+        price: '5.0 AED',
+    },
+    {
+        name: 'Chicken Mandi',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736788977/Caltec_Customers/101.jpg',
+        ingredients: ['Chicken', 'Rice'],
+        price: '5.8 AED',
+    },
+    {
+        name: 'Lamb Burger',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736788996/Caltec_Customers/116.jpg',
+        ingredients: ['Lamb', 'Bun', 'Fries', 'Sauce', 'Cheese', 'Vegetables'],
+        price: '1.5 AED',
+    },
+    {
+        name: 'Sheesh Tawouk Sandwich',
+        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789002/Caltec_Customers/121.jpg',
+        ingredients: ['Chicken', 'Bread', 'Vegetables'],
+        price: '0.8 AED',
     },
     {
         name: 'Um Ali',
-        image: dishImg,
-        ingredients: ['Puff Pastry', 'Milk', 'Nuts'],
-        price: '$5.00',
-    },
-    {
-        name: 'Ras Malai',
-        image: dishImg,
-        ingredients: ['Cheese Balls', 'Milk', 'Cardamom'],
-        price: '$5.00',
-    },
-    {
-        name: 'Chicken Spring Roll',
-        image: dishImg,
-        ingredients: ['Chicken', 'Spring Roll Wrapper', 'Vegetables'],
-        price: '$5.00',
-    },
-    {
-        name: 'Green Chicken Tikka',
-        image: dishImg,
-        ingredients: ['Chicken', 'Green Masala', 'Yoghurt'],
-        price: '$5.00',
-    },
-    {
-        name: 'Shami Kabab',
-        image: dishImg,
-        ingredients: ['Ground Meat', 'Lentils', 'Spices'],
-        price: '$5.00',
-    },
-    {
-        name: 'Beef Steak',
-        image: dishImg,
-        ingredients: ['Beef', 'Pepper Sauce', 'Garlic'],
-        price: '$5.00',
-    },
-    {
-        name: 'Mixed Cup Sweets',
-        image: dishImg,
-        ingredients: ['Cream', 'Biscuits', 'Chocolate'],
-        price: '$5.00',
+        image: "https://res.cloudinary.com/doigzeztt/image/upload/v1736789016/Caltec_Customers/133.jpg",
+        ingredients: ['Puff', 'Milk', 'Nuts'],
+        price: '0.8 AED',
     },
 ];
 
@@ -116,7 +116,7 @@ export default function PopularDishes() {
                                         alt={dish.name}
                                         fill
                                         className='object-cover rounded-md transition-all duration-300 group-hover:scale-110 group-hover:brightness-50'
-                                        placeholder='blur'
+                                        unoptimized
                                     />
                                     <div className='absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
                                         <div className='w-24 h-24 flex flex-col items-center justify-center bg-white rounded-full shadow-lg transform scale-0 transition-transform duration-300 group-hover:scale-100'>

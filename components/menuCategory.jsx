@@ -22,12 +22,12 @@ function MenuItem({ menuItem }) {
         <div className='flex flex-row items-center overflow-hidden w-full rounded-lg cursor-pointer hover:bg-[#01010111] transition-colors duration-200 group'>
             <div className='relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-lg'>
                 <Image
-                    src={DummyImage}
+                    src={menuItem.image || DummyImage}
                     alt={menuItem.engName}
                     className='object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105'
                     width={128}
                     height={128}
-                    placeholder='blur'
+                    unoptimized
                 />
             </div>
             <div className='p-4 flex flex-col gap-2 w-full'>

@@ -18,7 +18,7 @@ export default function Footer() {
                         <p className='text-sm'>
                             Interested in working with us?
                         </p>
-                        <p className='text-white'>info@example.com</p>
+                        <p className='text-white'>baitalayawed@gmail.com</p>
                     </div>
 
                     {/* Navigation */}
@@ -57,8 +57,8 @@ export default function Footer() {
                                     Book a consultation
                                 </a>
                             </li>
-                            <li>example@example.com</li>
-                            <li>123456789</li>
+                            <li>baitalayawed@gmail.com</li>
+                            <li>17533933</li>
                         </ul>
                     </div>
 
@@ -66,23 +66,22 @@ export default function Footer() {
                     <div>
                         <h3 className='font-semibold mb-4'>Address</h3>
                         <p className='text-sm'>
-                            570 8th Ave, New York,
+                            Opp. Master Point, Near Casino Garden,
                             <br />
-                            10018 United States
+                            Muharraq, Kingdom of Bahrain
                         </p>
                         <h3 className='font-semibold mt-4 mb-2'>Hours:</h3>
                         <p className='text-sm'>
-                            9.30am - 6.30pm
+                            9.30am - 2.00am
                             <br />
-                            Monday To Friday
+                            Monday To Sunday
                         </p>
                     </div>
                 </div>
 
                 {/* Bottom Section */}
                 <div className='mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center'>
-                    <p className='text-sm'>&copy; 2024 Bait Al Ayawed</p>
-                    <p className='text-sm mt-4 md:mt-0'>Made by Dev</p>
+                    <p className='text-sm'>&copy; 2025 Bait Al Ayawed</p>
                 </div>
             </div>
         </footer>
