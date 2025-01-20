@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import TestimonialImage1 from '@/assets/images/testimonials/testimonial1.avif';
-import TestimonialImage2 from '@/assets/images/testimonials/testimonial2.avif';
-import TestimonialImage3 from '@/assets/images/testimonials/testimonial3.avif';
+import TestimonialImage1 from '@/assets/images/testimonials/testimonial1.jpg';
+import TestimonialImage2 from '@/assets/images/testimonials/testimonial2.jpg';
 import pangaiaBold from '@/app/fonts/pangaiaBold';
 import pangaiaMedium from '@/app/fonts/pangaiaMedium';
 
@@ -12,53 +11,47 @@ const testimonials = [
         quote: 'The best restaurant',
         content:
             'Last night, we dined at place and were simply blown away. From the moment we stepped in, we were enveloped in an inviting atmosphere and greeted with warm smiles.',
-        author: 'Sophire Robson',
-        location: 'Los Angeles, CA',
+        author: 'Mehmood Khan',
         image: TestimonialImage1,
     },
     {
         quote: 'Simply delicious',
         content:
             'Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for our anniversary dinner. Each dish was prepared and beautifully presented.',
-        author: 'Jack Doe',
-        location: 'Los Angeles, CA',
+        author: 'Muhammad Usman',
         image: TestimonialImage2,
     },
     {
         quote: 'One of a kind restaurant',
         content:
             'The culinary experience at place is first to none. The atmosphere is vibrant, the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended.',
-        author: 'Sophire Robson',
-        location: 'Los Angeles, CA',
-        image: TestimonialImage3,
+        author: 'Mehmood Khan',
+        image: TestimonialImage1,
     },
     {
         quote: 'Exceptional dining experience',
         content:
             "Every visit to this restaurant is a treat. The menu is diverse, the flavors are bold, and the presentation is always Instagram-worthy. It's become our go-to spot for special occasions.",
-        author: 'Emma Thompson',
-        location: 'New York, NY',
-        image: TestimonialImage1,
+        author: 'Muhammad Usman',
+        image: TestimonialImage2,
     },
     {
         quote: 'A culinary journey',
         content:
             "From appetizers to desserts, each dish tells a story. The chef's creativity shines through in every bite. The attentive staff and cozy ambiance make for an unforgettable dining experience.",
-        author: 'Michael Chen',
-        location: 'San Francisco, CA',
-        image: TestimonialImage2,
+        author: 'Mehmood Khan',
+        image: TestimonialImage1,
     },
     {
         quote: 'Hidden gem',
         content:
             "I stumbled upon this place by chance, and it's now my favorite restaurant in the city. The fusion of flavors is unlike anything I've tasted before. A must-visit for food enthusiasts!",
-        author: 'Sarah Johnson',
-        location: 'Chicago, IL',
-        image: TestimonialImage3,
+        author: 'Muhammad Usman',
+        image: TestimonialImage2,
     },
 ];
 
-const TestimonialCard = ({ quote, content, author, location, image }) => (
+const TestimonialCard = ({ quote, content, author, image }) => (
     <div className='bg-gray-50 p-6 rounded-lg flex flex-col h-full mx-4 w-[400px]'>
         <div className='flex-grow'>
             <h3
@@ -78,7 +71,6 @@ const TestimonialCard = ({ quote, content, author, location, image }) => (
                 />
                 <div>
                     <p className='font-semibold text-gray-800'>{author}</p>
-                    <p className='text-gray-600 text-sm'>{location}</p>
                 </div>
             </div>
         </div>
@@ -133,7 +125,7 @@ export default function InfiniteTestimonials() {
     }, [scrollPosition]);
 
     return (
-        <section className='py-16 px-4 w-full mx-auto feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg'>
+        <section className='pb-16 px-4 w-full mx-auto feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg'>
             <div className='container mx-auto max-w-4xl text-center mb-12'>
                 <span className='text-red-600 font-semibold mb-2 inline-block'>
                     - Testimonials -

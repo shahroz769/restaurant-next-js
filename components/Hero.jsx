@@ -39,6 +39,14 @@ export default function Hero() {
         return () => clearInterval(timer);
     }, []);
 
+    const scrollToContact = (e) => {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className='relative h-screen mb-4'>
             <AnimatePresence initial={false}>
@@ -81,7 +89,8 @@ export default function Hero() {
                         {texts[currentIndex].subtitle}
                     </motion.p>
                     <Link
-                        href='/'
+                        href='#contact-section'
+                        onClick={scrollToContact}
                         className='bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300'
                     >
                         Contact us

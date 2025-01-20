@@ -191,7 +191,7 @@ function EmblaCarousel({ dishes, options }) {
 export default function ImprovedDishCarousel() {
     return (
         <div className='feather-shadow-sm md:feather-shadow-md lg:feather-shadow-lg flex flex-col items-center gap-8 px-4 sm:px-6 md:px-8 lg:px-12 w-full'>
-            <SectionHeader sub='OUR MENU' main='Our Delicious Foods' />
+            <SectionHeader sub='DINE-IN MENU' main='Categories' />
             <EmblaCarousel dishes={dishes} options={OPTIONS} />
         </div>
     );

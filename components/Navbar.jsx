@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Logo from '@/assets/images/Logo1.png';
+import Whatsapp from '@/assets/images/whatsapp.png';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,17 @@ export default function Navbar() {
     const navItems = [
         { name: 'Home', href: '/' },
         { name: 'Dine-in', href: '/dine-in' },
-        { name: 'Catering', href: '/catering' },
-        { name: 'Blog', href: '/blog' },
+        // { name: 'Catering', href: '/catering' },
+        // { name: 'Blog', href: '/blog' },
     ];
+
+    const scrollToContact = (e) => {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <nav
@@ -46,7 +55,7 @@ export default function Navbar() {
                     <div className='flex-shrink-0'>
                         <Link href='/'>
                             <Image
-                                src={Logo}
+                                src={Logo || '/placeholder.svg'}
                                 alt='Bait Al Ayawed Logo'
                                 width={140}
                                 height={140}
@@ -66,13 +75,27 @@ export default function Navbar() {
                             ))}
                         </div>
                     </div>
-                    <div className='hidden md:block'>
-                        <Link
-                            href='/'
+                    <div className='hidden md:flex items-center space-x-2'>
+                        <a
+                            href='#contact-section'
+                            onClick={scrollToContact}
                             className='bg-white text-black px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-colors duration-300'
                         >
                             Contact
-                        </Link>
+                        </a>
+                        <a
+                            href='https://wa.me/97333220068'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-white hover:text-green-400 transition-colors duration-300'
+                        >
+                            <Image
+                                src={Whatsapp}
+                                alt={Whatsapp}
+                                width={40}
+                                height={40}
+                            />
+                        </a>
                     </div>
                     <div className='md:hidden'>
                         <button
@@ -136,12 +159,22 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <Link
-                            href='/contact'
+                        <a
+                            href='#contact-section'
+                            onClick={scrollToContact}
                             className='text-white hover:bg-white hover:text-black block px-3 py-2 rounded-md text-base font-medium'
                         >
                             Contact
-                        </Link>
+                        </a>
+                        <a
+                            href='https://wa.me/97333220068'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-white hover:bg-green-400 flex items-center px-3 py-2 rounded-md text-base font-medium'
+                        >
+                            <WhatsappIcon size={20} className='mr-2' />
+                            WhatsApp
+                        </a>
                     </div>
                 </motion.div>
             )}

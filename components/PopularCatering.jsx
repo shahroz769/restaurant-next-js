@@ -4,85 +4,42 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
-import dishImg from '@/assets/images/bg.avif';
 import pangaiaBold from '@/app/fonts/pangaiaBold';
+import biryani from '@/assets/images/catering/biryani.jpg';
+import chicken_kebab from '@/assets/images/catering/chicken_kebab.jpg';
+import fish_grill from '@/assets/images/catering/fish_grill.jpg';
+import grill_lobster from '@/assets/images/catering/grill_lobster.jpg';
+import kebab_rice from '@/assets/images/catering/kebab_rice.jpg';
+import mandi from '@/assets/images/catering/mandi.jpg';
 
 const dishes = [
     {
-        name: 'Mixed Grill',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789034/Caltec_Customers/29.jpg',
-        ingredients: ['Malai Boti', 'Sheesh Tawouk', 'Kabab'],
-        price: '4.0 AED',
+        name: 'Biryani',
+        image: biryani,
     },
     {
-        name: 'Chicken Shashlik with Rice',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789042/Caltec_Customers/35.jpg',
-        ingredients: ['Chicken Shashlik', 'Rice'],
-        price: '2.0 AED',
+        name: 'Chicken Kebab',
+        image: chicken_kebab,
     },
     {
-        name: 'Lamb Chops',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789055/Caltec_Customers/46.jpg',
-        ingredients: ['Lamb Meat', 'Spices', 'Sauce'],
-        price: '6.5 AED',
+        name: 'Whole Grilled Fish Hamoor',
+        image: fish_grill,
     },
     {
-        name: 'Garlic Prawn with Rice',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789066/Caltec_Customers/57.jpg',
-        ingredients: ['Garlic', 'Prawn', 'Rice'],
-        price: '3.2 AED',
+        name: 'Grilled Lobster',
+        image: grill_lobster,
     },
     {
-        name: 'Mixed Chowmein',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789076/Caltec_Customers/67.jpg',
-        ingredients: ['Chicken', 'Vegetables'],
-        price: '1.8 AED',
+        name: 'Turkish Kabab with Rice',
+        image: kebab_rice,
     },
     {
-        name: 'Mutton Kadahi',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789083/Caltec_Customers/74.jpg',
-        ingredients: ['Mutton', 'Tomatoes', 'Spices'],
-        price: '2.5 AED',
-    },
-    {
-        name: 'Chicken Oriental Masala',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789093/Caltec_Customers/84.jpg',
-        ingredients: ['Chicken', 'Spices'],
-        price: '2.2 AED',
-    },
-    {
-        name: 'Mutton Dum Pukht Biryani',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789105/Caltec_Customers/95.jpg',
-        ingredients: ['Mutton', 'Rice'],
-        price: '5.0 AED',
-    },
-    {
-        name: 'Chicken Mandi',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736788977/Caltec_Customers/101.jpg',
-        ingredients: ['Chicken', 'Rice'],
-        price: '5.8 AED',
-    },
-    {
-        name: 'Lamb Burger',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736788996/Caltec_Customers/116.jpg',
-        ingredients: ['Lamb', 'Bun', 'Fries', 'Sauce', 'Cheese', 'Vegetables'],
-        price: '1.5 AED',
-    },
-    {
-        name: 'Sheesh Tawouk Sandwich',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789002/Caltec_Customers/121.jpg',
-        ingredients: ['Chicken', 'Bread', 'Vegetables'],
-        price: '0.8 AED',
-    },
-    {
-        name: 'Um Ali',
-        image: 'https://res.cloudinary.com/doigzeztt/image/upload/v1736789016/Caltec_Customers/133.jpg',
-        ingredients: ['Puff', 'Milk', 'Nuts'],
-        price: '0.8 AED',
+        name: 'Mandi',
+        image: mandi,
     },
 ];
 
-export default function PopularDishes() {
+export default function PopularCatering() {
     const [emblaRef] = useEmblaCarousel({ loop: true, align: 'center' }, [
         Autoplay({ delay: 3000 }),
     ]);
@@ -96,7 +53,7 @@ export default function PopularDishes() {
                 <h2
                     className={`text-4xl md:text-5xl font-bold text-gray-900 ${pangaiaBold.className}`}
                 >
-                    Dine-in
+                    Catering
                 </h2>
             </div>
             <div
@@ -132,9 +89,6 @@ export default function PopularDishes() {
                                 <h3 className='text-[#383632] text-xl text-center font-semibold mb-2'>
                                     {dish.name}
                                 </h3>
-                                <p className='text-[#8D8987] text-center text-base font-semibold mb-2'>
-                                    {dish.ingredients.join(' • ')}
-                                </p>
                             </div>
                         </div>
                     ))}

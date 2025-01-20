@@ -40,7 +40,10 @@ export default function ContactSection() {
     };
 
     return (
-        <div className='min-h-[600px] relative flex items-center justify-center overflow-hidden py-12 px-4'>
+        <div
+            id='contact-section'
+            className='min-h-[600px] relative flex items-center justify-center overflow-hidden py-12 px-4'
+        >
             <div className='absolute inset-0 z-0'>
                 <Image
                     src={ContactBg}
@@ -71,7 +74,9 @@ export default function ContactSection() {
                                     Contact
                                 </h4>
                                 <p className='text-2xl font-bold'>
-                                    17533933 / 33220068
+                                    +973 17533933 (Call)
+                                    <br />
+                                    +973 33220068 (Whatsapp)
                                 </p>
                             </div>
                         </div>

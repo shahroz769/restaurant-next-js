@@ -1,12 +1,13 @@
-import CateringMenu from "@/components/CateringMenu";
-import ContactSection from "@/components/ContactSection.jsx";
-import Hero from "@/components/Hero";
-import ImprovedDishCarousel from "@/components/ImprovedDishCarousel";
-import Marquee from "@/components/Marquee";
-import PopularDishes from "@/components/PopularDishes";
-import PopularFoodContainer from "@/components/PopularFoodContainer";
-import RecentArticles from "@/components/RecentArticles";
-import Testimonials from "@/components/Testimonials";
+import CateringMenu from '@/components/CateringMenu';
+import ContactSection from '@/components/ContactSection.jsx';
+import Hero from '@/components/Hero';
+import ImprovedDishCarousel from '@/components/ImprovedDishCarousel';
+import Marquee from '@/components/Marquee';
+import PopularDishes from '@/components/PopularDishes';
+import PopularCatering from '@/components/PopularCatering';
+import PopularFoodContainer from '@/components/PopularFoodContainer';
+// import RecentArticles from "@/components/RecentArticles";
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
     return (
@@ -15,9 +16,10 @@ export default function Home() {
             <Marquee />
             <ImprovedDishCarousel />
             <PopularDishes />
-            <PopularFoodContainer />
+            {/* <PopularFoodContainer /> */}
             <CateringMenu />
-            <RecentArticles />
+            {/* <RecentArticles /> */}
+            <PopularCatering />
             <Testimonials />
             <ContactSection />
         </>

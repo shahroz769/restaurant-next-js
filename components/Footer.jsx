@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className='bg-neutral-900 text-white py-8'>
             <div className='container mx-auto px-4'>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {/* Logo and Description */}
                     <div className='space-y-4'>
                         <div className='flex items-center space-x-2'>
@@ -21,7 +21,7 @@ export default function Footer() {
                         <p className='text-white'>baitalayawed@gmail.com</p>
                     </div>
 
-                    {/* Navigation */}
+                    {/* Navigation
                     <div>
                         <h3 className='font-semibold mb-4'>Navigation</h3>
                         <ul className='space-y-2'>
@@ -46,7 +46,7 @@ export default function Footer() {
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Contact */}
                     <div>
@@ -58,7 +58,8 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>baitalayawed@gmail.com</li>
-                            <li>17533933</li>
+                            <li>+973 17533933 (Call)</li>
+                            <li>+973 33220068 (Whatsapp)</li>
                         </ul>
                     </div>
 
@@ -66,15 +67,17 @@ export default function Footer() {
                     <div>
                         <h3 className='font-semibold mb-4'>Address</h3>
                         <p className='text-sm'>
-                            Opp. Master Point, Near Casino Garden,
+                            Block 205, Road 516, Building 1721 A
                             <br />
                             Muharraq, Kingdom of Bahrain
                         </p>
-                        <h3 className='font-semibold mt-4 mb-2'>Hours:</h3>
+                        <h3 className='font-semibold mt-4 mb-2'>Dine-in Hours:</h3>
                         <p className='text-sm'>
-                            9.30am - 2.00am
+                            11.00 AM - 03.00 PM
                             <br />
-                            Monday To Sunday
+                            06.00 PM - 11.30 PM
+                            <br />
+                            Everyday
                         </p>
                     </div>
                 </div>

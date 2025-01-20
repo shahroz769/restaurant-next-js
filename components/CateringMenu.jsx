@@ -811,7 +811,7 @@ export default function CateringMenu({ location }) {
                                                 }}
                                                 className='flex gap-6 bg-slate-50 p-4 rounded-lg shadow-sm transition-shadow duration-300 group cursor-pointer'
                                             >
-                                                <div className='flex-shrink-0 w-20 h-20 rounded-full overflow-hidden'>
+                                                {/* <div className='flex-shrink-0 w-20 h-20 rounded-full overflow-hidden'>
                                                     <Image
                                                         src={menuDish}
                                                         alt={dish.alt}
@@ -820,7 +820,7 @@ export default function CateringMenu({ location }) {
                                                         className='w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
                                                         placeholder='blur'
                                                     />
-                                                </div>
+                                                </div> */}
                                                 <div className='flex flex-col justify-center w-full'>
                                                     <div className='flex items-center justify-between gap-2 mb-2'>
                                                         <h3 className='text-lg font-semibold text-gray-900'>
