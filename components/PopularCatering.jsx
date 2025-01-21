@@ -1,54 +1,75 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import pangaiaBold from '@/app/fonts/pangaiaBold';
-import biryani from '@/assets/images/catering/biryani.jpg';
-import chicken_kebab from '@/assets/images/catering/chicken_kebab.jpg';
-import fish_grill from '@/assets/images/catering/fish_grill.jpg';
-import grill_lobster from '@/assets/images/catering/grill_lobster.jpg';
-import kebab_rice from '@/assets/images/catering/kebab_rice.jpg';
-import mandi from '@/assets/images/catering/mandi.jpg';
+import image1 from '@/assets/images/event_buffet/1.jpg';
+import image2 from '@/assets/images/event_buffet/2.jpg';
+import image3 from '@/assets/images/event_buffet/3.jpg';
+import image4 from '@/assets/images/event_buffet/4.jpg';
+import image5 from '@/assets/images/event_buffet/5.jpg';
+import image6 from '@/assets/images/event_buffet/6.jpg';
+import image7 from '@/assets/images/event_buffet/7.jpg';
+import image8 from '@/assets/images/event_buffet/8.jpg';
+import image9 from '@/assets/images/event_buffet/9.jpg';
+import image10 from '@/assets/images/event_buffet/10.jpg';
+import image11 from '@/assets/images/event_buffet/11.jpg';
+import image12 from '@/assets/images/event_buffet/12.jpg';
+import image13 from '@/assets/images/event_buffet/13.jpg';
+import image14 from '@/assets/images/event_buffet/14.jpg';
+import image15 from '@/assets/images/event_buffet/15.jpg';
+import image16 from '@/assets/images/event_buffet/16.jpg';
+import image17 from '@/assets/images/event_buffet/17.jpg';
+import image18 from '@/assets/images/event_buffet/18.jpg';
+import image19 from '@/assets/images/event_buffet/19.jpg';
 
-const dishes = [
-    {
-        name: 'Biryani',
-        image: biryani,
-    },
-    {
-        name: 'Chicken Kebab',
-        image: chicken_kebab,
-    },
-    {
-        name: 'Whole Grilled Fish Hamoor',
-        image: fish_grill,
-    },
-    {
-        name: 'Grilled Lobster',
-        image: grill_lobster,
-    },
-    {
-        name: 'Turkish Kabab with Rice',
-        image: kebab_rice,
-    },
-    {
-        name: 'Mandi',
-        image: mandi,
-    },
-];
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
 
 export default function PopularCatering() {
     const [emblaRef] = useEmblaCarousel({ loop: true, align: 'center' }, [
         Autoplay({ delay: 3000 }),
     ]);
 
+    const dishes = useMemo(
+        () =>
+            shuffleArray([
+                { image: image1 },
+                { image: image2 },
+                { image: image3 },
+                { image: image4 },
+                { image: image5 },
+                { image: image6 },
+                { image: image7 },
+                { image: image8 },
+                { image: image9 },
+                { image: image10 },
+                { image: image11 },
+                { image: image12 },
+                { image: image13 },
+                { image: image14 },
+                { image: image15 },
+                { image: image16 },
+                { image: image17 },
+                { image: image18 },
+                { image: image19 },
+            ]),
+        []
+    );
+
     return (
         <div className='mx-auto py-12'>
             <div className='text-center mb-8'>
                 <p className='text-red-600 font-semibold mb-2'>
-                    - POPULAR DISHES -
+                    - EVENTS - BUFFET -
                 </p>
                 <h2
                     className={`text-4xl md:text-5xl font-bold text-gray-900 ${pangaiaBold.className}`}
@@ -69,8 +90,7 @@ export default function PopularCatering() {
                             <div className='overflow-hidden group'>
                                 <div className='relative h-52 sm:h-72 mb-4 overflow-hidden'>
                                     <Image
-                                        src={dish.image}
-                                        alt={dish.name}
+                                        src={dish.image || '/placeholder.svg'}
                                         fill
                                         className='object-cover rounded-md transition-all duration-300 group-hover:scale-110 group-hover:brightness-50'
                                         unoptimized

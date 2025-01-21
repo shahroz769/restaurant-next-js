@@ -16,8 +16,8 @@ export default function Home() {
             <Marquee />
             <ImprovedDishCarousel />
             <PopularDishes />
-            {/* <PopularFoodContainer /> */}
             <CateringMenu />
+            <PopularFoodContainer />
             {/* <RecentArticles /> */}
             <PopularCatering />
             <Testimonials />
