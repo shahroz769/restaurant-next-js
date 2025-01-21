@@ -90,8 +90,8 @@ export default function Navbar() {
                             className='text-white hover:text-green-400 transition-colors duration-300'
                         >
                             <Image
-                                src={Whatsapp}
-                                alt={Whatsapp}
+                                src={Whatsapp || '/placeholder.svg'}
+                                alt='WhatsApp'
                                 width={40}
                                 height={40}
                             />
@@ -161,7 +161,10 @@ export default function Navbar() {
                         ))}
                         <a
                             href='#contact-section'
-                            onClick={scrollToContact}
+                            onClick={(e) => {
+                                scrollToContact(e);
+                                setIsOpen(false);
+                            }}
                             className='text-white hover:bg-white hover:text-black block px-3 py-2 rounded-md text-base font-medium'
                         >
                             Contact
@@ -172,7 +175,13 @@ export default function Navbar() {
                             rel='noopener noreferrer'
                             className='text-white hover:bg-green-400 flex items-center px-3 py-2 rounded-md text-base font-medium'
                         >
-                            <WhatsappIcon size={20} className='mr-2' />
+                            {/* <Image
+                                src={Whatsapp || '/placeholder.svg'}
+                                alt='WhatsApp'
+                                width={20}
+                                height={20}
+                                className='mr-2'
+                            /> */}
                             WhatsApp
                         </a>
                     </div>

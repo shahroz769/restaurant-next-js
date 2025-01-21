@@ -75,20 +75,7 @@ export default function PopularCatering() {
                                         className='object-cover rounded-md transition-all duration-300 group-hover:scale-110 group-hover:brightness-50'
                                         unoptimized
                                     />
-                                    <div className='absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
-                                        <div className='w-24 h-24 flex flex-col items-center justify-center bg-white rounded-full shadow-lg transform scale-0 transition-transform duration-300 group-hover:scale-100'>
-                                            <p className='text-gray-900 text-sm font-bold'>
-                                                JUST
-                                            </p>
-                                            <p className='text-gray-900 text-lg font-bold'>
-                                                {dish.price}
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
-                                <h3 className='text-[#383632] text-xl text-center font-semibold mb-2'>
-                                    {dish.name}
-                                </h3>
                             </div>
                         </div>
                     ))}

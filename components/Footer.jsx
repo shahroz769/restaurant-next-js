@@ -58,8 +58,8 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>baitalayawed@gmail.com</li>
-                            <li>+973 17533933 (Call)</li>
-                            <li>+973 33220068 (Whatsapp)</li>
+                            <li>Muhammad Iqbal</li>
+                            <li>+973 33220068</li>
                         </ul>
                     </div>
 

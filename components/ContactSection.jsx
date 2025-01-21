@@ -74,9 +74,9 @@ export default function ContactSection() {
                                     Contact
                                 </h4>
                                 <p className='text-2xl font-bold'>
-                                    +973 17533933 (Call)
+                                    Muhammad Iqbal
                                     <br />
-                                    +973 33220068 (Whatsapp)
+                                    +973 33220068
                                 </p>
                             </div>
                         </div>
